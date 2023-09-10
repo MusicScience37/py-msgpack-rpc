@@ -1,0 +1,46 @@
+stages:
+  - test
+  - deploy
+  - release
+
+include:
+  - template: Dependency-Scanning.gitlab-ci.yml
+  - template: Security/SAST.gitlab-ci.yml
+
+pre-commit:
+  stage: test
+  needs: []
+  image: musicscience37/pipenv:jammy
+  script:
+    - mkdir -p .venv
+    - poetry config virtualenvs.in-project true
+    - poetry env use 3.11
+    - poetry install
+    - poetry run pre-commit run --all-files
+  cache:
+    key:
+      prefix: cache-${CI_JOB_NAME}
+      files:
+        - poetry.lock
+    paths:
+      - .venv
+  interruptible: true
+
+spell check:
+  stage: test
+  needs: []
+  image: node
+  script:
+    - npm install -g cspell
+    - cspell lint
+      "**/*.py"
+      "**/*.txt"
+      "**/*.md"
+      "**/*.rst"
+      "**/*.yaml"
+      "**/*.yml"
+      "**/*.json"
+      "**/*.toml"
+      "**/*.sh"
+      "**/*.bash"
+  interruptible: true

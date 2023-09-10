@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "py-msgpack-rpc"
+version = "0.1.0a1"
+description = "An RPC library implementing MessagePack RPC in Python."
+authors = ["Kenta Kabashima <kenta_program37@hotmail.co.jp>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.12"
+msgpack = "^1.0.5"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.9.0"
+pre-commit = "^3.4.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

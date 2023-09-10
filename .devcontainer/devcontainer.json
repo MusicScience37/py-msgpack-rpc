@@ -1,0 +1,25 @@
+{
+  "build": { "dockerfile": "Dockerfile" },
+  "containerEnv": {},
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "streetsidesoftware.code-spell-checker",
+        "davidanson.vscode-markdownlint",
+        "jebbs.plantuml",
+        "esbenp.prettier-vscode",
+        "ms-python.python",
+        "njpwerner.autodocstring",
+        "lextudio.restructuredtext",
+        "trond-snekvik.simple-rst",
+        "hbenl.vscode-test-explorer",
+        "ms-azuretools.vscode-docker",
+        "tamasfe.even-better-toml",
+        "redhat.vscode-yaml",
+        "ms-python.black-formatter"
+      ],
+      "settings": {}
+    }
+  },
+  "postCreateCommand": "bash ./.devcontainer/setup.bash"
+}

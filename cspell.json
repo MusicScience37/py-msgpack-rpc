@@ -1,0 +1,27 @@
+{
+  "version": "0.2",
+  "ignorePaths": [],
+  "dictionaryDefinitions": [],
+  "dictionaries": [],
+  "words": [
+    "autobuild",
+    "genindex",
+    "interruptible",
+    "Kabashima",
+    "Kenta",
+    "maxdepth",
+    "modindex",
+    "msgpack",
+    "MusicScience37",
+    "packb",
+    "peername",
+    "pipenv",
+    "SAST",
+    "toctree",
+    "todos",
+    "venv",
+    "virtualenvs"
+  ],
+  "ignoreWords": [],
+  "import": []
+}
