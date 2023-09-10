@@ -25,6 +25,7 @@ class ServerConnectionProtocol(asyncio.Protocol):
         self._writer = asyncio.get_running_loop().create_task(
             self._write_data(transport)
         )
+        LOGGER.info("accepted %s", transport.get_extra_info("peername"))
 
     def connection_lost(self, exc: Exception | None) -> None:
         if self._writer is not None:
@@ -50,6 +51,8 @@ async def main() -> None:
     server = await loop.create_server(
         lambda: ServerConnectionProtocol(), host=HOST, port=PORT_NUMBER
     )
+    for socket in server.sockets:
+        LOGGER.info("listen %s", socket.getsockname())
     async with server:
         await server.serve_forever()
 

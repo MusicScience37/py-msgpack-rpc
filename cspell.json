@@ -11,6 +11,7 @@
     "modindex",
     "msgpack",
     "packb",
+    "peername",
     "SAST",
     "toctree",
     "todos"

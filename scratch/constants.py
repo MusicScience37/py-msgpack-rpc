@@ -1,5 +1,5 @@
 """Constants."""
 
 
-HOST = "127.0.0.1"
+HOST = "localhost"
 PORT_NUMBER = 18745
