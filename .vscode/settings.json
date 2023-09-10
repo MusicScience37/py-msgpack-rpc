@@ -1,3 +1,6 @@
 {
-  "cSpell.enableFiletypes": ["toml"]
+  "cSpell.enableFiletypes": ["toml"],
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  }
 }

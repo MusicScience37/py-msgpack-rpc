@@ -10,6 +10,7 @@
     "maxdepth",
     "modindex",
     "msgpack",
+    "packb",
     "SAST",
     "toctree",
     "todos"
