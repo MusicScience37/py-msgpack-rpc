@@ -1,5 +1,5 @@
 {
-  "cSpell.enableFiletypes": ["toml"],
+  "cSpell.enableFiletypes": ["shellscript", "toml"],
   "esbonio.sphinx.confDir": "${workspaceFolder}/doc/source",
   "esbonio.server.enabled": false,
   "restructuredtext.linter.disabledLinters": ["rstcheck", "rst-lint"],
