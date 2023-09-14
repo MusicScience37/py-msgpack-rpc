@@ -20,7 +20,7 @@
         "ms-python.flake8",
         "ms-python.pylint",
         "ms-python.mypy-type-checker",
-        "python.isort"
+        "ms-python.isort"
       ],
       "settings": {}
     }
