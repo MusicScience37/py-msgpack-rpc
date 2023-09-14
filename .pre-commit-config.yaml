@@ -17,5 +17,18 @@ repos:
         language: python
         require_serial: true
         types_or: [python, pyi]
+      - id: isort
+        name: isort
+        description: Format Python files using isort.
+        entry: isort
+        language: python
+        require_serial: true
+        types_or: [python]
+      - id: pydocstyle
+        name: pydocstyle
+        description: Check docstring.
+        entry: pydocstyle
+        language: python
+        types_or: [python]
 # Automatically generated files should not be checked.
 exclude: "\\.approved\\."
