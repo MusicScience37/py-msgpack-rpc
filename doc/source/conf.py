@@ -21,7 +21,6 @@ import typing
 
 import toml
 
-
 # -- Project information -----------------------------------------------------
 
 project = "py-msgpack-rpc"
