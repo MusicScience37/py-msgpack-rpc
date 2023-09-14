@@ -6,6 +6,11 @@
   "files.watcherExclude": {
     "**/.venv/**": true
   },
+  "python.testing.pytestEnabled": true,
+  "autoDocstring.docstringFormat": "google",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
   "todo-tree.filtering.excludeGlobs": ["**/.venv/*/**"],
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter"

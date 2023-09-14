@@ -4,7 +4,6 @@ import asyncio
 import logging
 
 import msgpack
-
 from constants import HOST, PORT_NUMBER
 
 LOGGER = logging.getLogger(__name__)
