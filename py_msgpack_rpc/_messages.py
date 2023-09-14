@@ -52,7 +52,7 @@ def parse_message(data: typing.Any) -> typing.Union[Request, Response]:
         data (typing.Any): Deserialized data.
 
     Raises:
-        ValueError: For invalid message data.
+        InvalidMessage: For invalid message data.
 
     Returns:
         typing.Union[Request, Response]: Parsed message.

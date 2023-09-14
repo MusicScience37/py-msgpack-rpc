@@ -44,6 +44,7 @@ profile = "black"
 
 [tool.pydocstyle]
 convention = "google"
+add-ignore = "D107"
 
 [tool.pylint.main]
 disable = "too-many-instance-attributes,line-too-long,fixme"

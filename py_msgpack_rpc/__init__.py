@@ -7,7 +7,7 @@ all_exports: list = [
     AsyncServerBuilder,
 ]
 for e in all_exports:
-    e.__module__ == __name__
+    e.__module__ == __name__  # pylint: disable=pointless-statement
 
 __all__ = [e.__name__ for e in all_exports]
 

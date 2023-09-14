@@ -26,10 +26,10 @@ class ServerProtocol(asyncio.Protocol):
 
         self._method_executor = method_executor
 
-        self._sent_messages = asyncio.Queue()
-        self._writer = None
+        self._sent_messages: asyncio.Queue[bytes] = asyncio.Queue()
+        self._writer: typing.Optional[asyncio.Task[None]] = None
 
-    def connection_made(self, transport: asyncio.Transport) -> None:
+    def connection_made(self, transport: asyncio.Transport) -> None:  # type: ignore[override]
         """Handle the condition that a connection is established.
 
         Args:
@@ -116,10 +116,16 @@ class AsyncServer:
         self._server = server
 
     async def __aenter__(self) -> AsyncServer:
+        """Function for "async with" statement.
+
+        Returns:
+            AsyncServer: This instance.
+        """
         await self._server.__aenter__()
         return self
 
     async def __aexit__(self, *args) -> None:
+        """Function for "async with" statement."""
         await self._server.__aexit__(*args)
 
     async def run(self) -> None:
@@ -185,7 +191,7 @@ class AsyncServerBuilder:
         )
 
         self._executor = MethodExecutor()
-        self._host: typing.Optional[str] = None
-        self._port: typing.Optional[int] = None
+        self._host = None
+        self._port = None
 
         return AsyncServer(asyncio_server)
