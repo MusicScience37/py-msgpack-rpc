@@ -1,7 +1,5 @@
 """Implementation of AsyncServer."""
 
-from __future__ import annotations
-
 import asyncio
 import logging
 import typing
@@ -39,7 +37,7 @@ class ServerProtocol(asyncio.Protocol):
             self._write_data(transport)
         )
         LOGGER.debug(
-            "accepted connection from %s", transport.get_extra_info("peername")
+            "Accepted connection from %s", transport.get_extra_info("peername")
         )
 
     def connection_lost(self, exc: Exception | None) -> None:
@@ -115,7 +113,7 @@ class AsyncServer:
     def __init__(self, server: asyncio.Server) -> None:
         self._server = server
 
-    async def __aenter__(self) -> AsyncServer:
+    async def __aenter__(self) -> typing.Self:
         """Function for "async with" statement.
 
         Returns:
