@@ -47,6 +47,9 @@ tests:
     - poetry run coverage report
     - poetry run coverage xml
     - poetry run coverage html
+    - curl -Os https://uploader.codecov.io/latest/linux/codecov
+    - chmod +x codecov
+    - ./codecov
   artifacts:
     paths:
       - .coverage
