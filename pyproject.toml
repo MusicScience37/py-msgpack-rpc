@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "py-msgpack-rpc"
-version = "0.1.0a1"
+version = "0.1.0a2"
 description = "An RPC library implementing MessagePack RPC in Python."
 authors = ["Kenta Kabashima <kenta_program37@hotmail.co.jp>"]
 license = "MIT"

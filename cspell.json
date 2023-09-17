@@ -24,6 +24,7 @@
     "pydocstyle",
     "pydoctest",
     "pylint",
+    "pypi",
     "pytest",
     "SAST",
     "toctree",

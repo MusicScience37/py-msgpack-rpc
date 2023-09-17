@@ -77,3 +77,27 @@ spell check:
       "**/*.sh"
       "**/*.bash"
   interruptible: true
+
+publish-package:
+  extends: .poetry install
+  needs: []
+  stage: deploy
+  rules:
+    - if: $CI_COMMIT_TAG =~ /^v/
+  script:
+    - poetry build
+    - poetry config pypi-token.pypi ${PYPI_TOKEN}
+    - poetry publish
+
+release:
+  image: registry.gitlab.com/gitlab-org/release-cli:latest
+  stage: release
+  needs: []
+  rules:
+    - if: $CI_COMMIT_TAG =~ /^v/
+  script:
+    - echo "This is a release job."
+  release:
+    tag_name: $CI_COMMIT_TAG
+    name: "$CI_COMMIT_TAG"
+    description: "./doc/source/change_log/${CI_COMMIT_TAG}.md"
