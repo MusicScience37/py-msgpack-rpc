@@ -2,6 +2,7 @@
 
 import asyncio
 import logging
+import socket
 import typing
 
 import msgpack
@@ -130,13 +131,26 @@ class AsyncServer:
         """Run this server."""
         await self._server.serve_forever()
 
-    def local_endpoints(self) -> typing.List[typing.Any]:
+    def local_endpoints(self) -> typing.List[typing.Tuple[str, int]]:
         """Get the local endpoints.
 
         Returns:
-            typing.List[typing.Any]: Local endpoints.
+            typing.List[typing.Tuple[str, int]]: Addresses of local endpoints. (IP address and port number.)
         """
-        return [socket.getsockname() for socket in self._server.sockets]
+        return [AsyncServer._get_address(socket) for socket in self._server.sockets]
+
+    @staticmethod
+    def _get_address(sock: socket.socket) -> typing.Tuple[str, int]:
+        """Get address of a socket.
+
+        Args:
+            sock (socket.socket): Socket.
+
+        Returns:
+            typing.Tuple[str, int]: Address. (IP address and port number.)
+        """
+        address = sock.getsockname()
+        return (address[0], address[1])
 
 
 class AsyncServerBuilder:
