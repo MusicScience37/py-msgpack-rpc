@@ -16,7 +16,7 @@ MAX_MESSAGE_ID = pow(2, 32) - 1
 
 
 class ClientProtocol(asyncio.Protocol):
-    """Protocol of servers."""
+    """Protocol of client."""
 
     def __init__(self) -> None:
         self._unpacker = msgpack.Unpacker()
