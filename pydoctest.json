@@ -1,4 +1,8 @@
 {
-  "include_paths": ["py_msgpack_rpc/*.py"],
+  "include_paths": ["py_msgpack_rpc/**/*.py"],
+  "exclude_paths": [
+    "py_msgpack_rpc/_server/_async_server.py",
+    "py_msgpack_rpc/_client/_async_client.py"
+  ],
   "parser": "google"
 }

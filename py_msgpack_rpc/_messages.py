@@ -1,5 +1,6 @@
 """Implementation of messages."""
 
+import collections.abc
 import dataclasses
 import enum
 import typing
@@ -22,12 +23,12 @@ class Request:
     Attributes:
         message_id (int): Message ID.
         method_name (str): Method name.
-        parameters (typing.List[typing.Any]): Parameters.
+        parameters (collections.abc.Collection[typing.Any]): Parameters.
     """
 
     message_id: int
     method_name: str
-    parameters: typing.List[typing.Any]
+    parameters: collections.abc.Collection[typing.Any]
 
 
 @dataclasses.dataclass

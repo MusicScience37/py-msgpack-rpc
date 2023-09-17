@@ -10,6 +10,8 @@ import py_msgpack_rpc
 
 logging.basicConfig(level=logging.DEBUG)
 
+LOGGER = logging.getLogger(__name__)
+
 
 def echo(*args: typing.Any) -> typing.Iterable[typing.Any]:
     """Return arguments.
@@ -26,9 +28,13 @@ async def main() -> None:
     builder.add_method("echo", echo)
     builder.listen_tcp(host=HOST, port=PORT_NUMBER)
     server = await builder.build()
+    LOGGER.info("Listen %s", server.local_endpoints())
     async with server:
         await server.run()
 
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    try:
+        asyncio.run(main())
+    except KeyboardInterrupt:
+        LOGGER.info("Stopped the server.")
