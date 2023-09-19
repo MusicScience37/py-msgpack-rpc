@@ -8,6 +8,7 @@
     "autobuild",
     "cobertura",
     "codecov",
+    "docparams",
     "genindex",
     "htmlcov",
     "interruptible",
