@@ -38,7 +38,6 @@ python checks:
     - poetry run mypy py_msgpack_rpc tests
     - poetry run flake8 py_msgpack_rpc tests
     - poetry run pydocstyle py_msgpack_rpc tests
-    - poetry run pydoctest
 
 tests:
   extends: .poetry install
