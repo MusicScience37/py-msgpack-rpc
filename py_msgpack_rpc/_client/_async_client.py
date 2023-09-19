@@ -148,10 +148,9 @@ class AsyncClient:
     async def call(self, method_name: str, *parameters: typing.Any) -> typing.Any:
         """Call a method.
 
-        Arguments after method_name is treated as parameters of the method.
-
         Args:
             method_name (str): Method name.
+            *parameters (typing.Any): Parameters.
 
         Raises:
             ServerError: When an error occurred in servers.

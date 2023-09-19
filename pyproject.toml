@@ -48,6 +48,7 @@ add-ignore = "D107"
 
 [tool.pylint.main]
 disable = "too-many-instance-attributes,line-too-long,fixme"
+load-plugins = "pylint.extensions.docparams"
 
 [build-system]
 requires = ["poetry-core"]
