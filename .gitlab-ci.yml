@@ -114,8 +114,8 @@ pages:
   image: alpine
   stage: deploy
   needs: [build document]
-  #rules:
-  #  - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
   script:
     - mv doc/build public
   artifacts:
