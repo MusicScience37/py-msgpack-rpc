@@ -7,7 +7,8 @@ An RPC library implementing MessagePack RPC in Python.
     :maxdepth: 2
     :caption: Contents
 
-    usage
+    usage/index
+    api/modules
     change_log/index
 
 

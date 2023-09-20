@@ -5,3 +5,4 @@ Change Log
     :maxdepth: 1
 
     v0.1.0a1
+    v0.1.0a2

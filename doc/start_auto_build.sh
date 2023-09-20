@@ -3,4 +3,7 @@
 set -e
 
 cd $(dirname $0)
-poetry run sphinx-autobuild source build --port 4873
+
+./update_apidoc.sh
+
+poetry run sphinx-autobuild source build --port 7612
