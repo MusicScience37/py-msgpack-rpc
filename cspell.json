@@ -4,9 +4,12 @@
   "dictionaryDefinitions": [],
   "dictionaries": [],
   "words": [
+    "apidoc",
     "asyncio",
     "autobuild",
     "cobertura",
+    "codecov",
+    "docparams",
     "genindex",
     "htmlcov",
     "interruptible",
