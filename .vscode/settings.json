@@ -9,7 +9,7 @@
   "python.testing.pytestEnabled": true,
   "autoDocstring.docstringFormat": "google",
   "editor.codeActionsOnSave": {
-    "source.organizeImports": true
+    "source.organizeImports": "explicit"
   },
   "todo-tree.filtering.excludeGlobs": ["**/.venv/*/**"],
   "[python]": {

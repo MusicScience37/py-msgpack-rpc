@@ -74,9 +74,17 @@ extensions += ["myst_parser"]
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = "sphinx_rtd_theme"
+html_theme = "sphinx_orange_book_theme"
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ["_static"]
+
+html_theme_options = {
+    # pygment configuration must be specified here.
+    "pygment_light_style": "gruvbox-light",
+    "pygment_dark_style": "native",
+    "repository_url": "https://gitlab.com/MusicScience37Projects/utility-libraries/py-msgpack-rpc",
+    "use_repository_button": True,
+}
