@@ -1,6 +1,5 @@
 """Test of messages."""
 
-
 from py_msgpack_rpc._messages import MessageType, Request, Response, parse_message
 
 
