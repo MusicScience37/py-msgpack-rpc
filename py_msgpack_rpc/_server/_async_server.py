@@ -6,6 +6,7 @@ import socket
 import typing
 
 import msgpack
+import typing_extensions
 
 from py_msgpack_rpc._messages import MessageType, Request, parse_message
 from py_msgpack_rpc._server._method_executor import MethodExecutor
@@ -114,7 +115,7 @@ class AsyncServer:
     def __init__(self, server: asyncio.Server) -> None:
         self._server = server
 
-    async def __aenter__(self) -> typing.Self:
+    async def __aenter__(self) -> typing_extensions.Self:
         """Function for "async with" statement.
 
         Returns:
