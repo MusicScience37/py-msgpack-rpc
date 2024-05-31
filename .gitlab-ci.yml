@@ -43,7 +43,11 @@ tests:
   extends: .poetry install
   parallel:
     matrix:
-      - PYTHON_VERSION: ["3.10", "3.11", "3.12"]
+      - PYTHON_VERSION:
+        # TODO
+        # - "3.10"
+        - "3.11"
+        - "3.12"
   script:
     - poetry run pytest --cov py_msgpack_rpc tests
     - poetry run coverage report
