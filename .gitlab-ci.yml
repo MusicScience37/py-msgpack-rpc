@@ -12,7 +12,7 @@ include:
   needs: []
   image: musicscience37/pipenv:jammy
   variables:
-    PYTHON_VERSION: "3.11"
+    PYTHON_VERSION: "3.12"
   before_script:
     - poetry config virtualenvs.in-project true
     - poetry env use ${PYTHON_VERSION}
