@@ -44,8 +44,7 @@ tests:
   parallel:
     matrix:
       - PYTHON_VERSION:
-        # TODO
-        # - "3.10"
+        - "3.10"
         - "3.11"
         - "3.12"
   script:

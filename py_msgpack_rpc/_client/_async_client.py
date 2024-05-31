@@ -5,6 +5,7 @@ import logging
 import typing
 
 import msgpack
+import typing_extensions
 
 from py_msgpack_rpc._exceptions import ServerError
 from py_msgpack_rpc._messages import MessageType, Request, Response, parse_message
@@ -132,7 +133,7 @@ class AsyncClient:
 
         self._next_message_id = 0
 
-    async def __aenter__(self) -> typing.Self:
+    async def __aenter__(self) -> typing_extensions.Self:
         """Function for "async with" statement.
 
         Returns:
