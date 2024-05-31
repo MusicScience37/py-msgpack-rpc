@@ -10,9 +10,9 @@ include:
 .poetry install:
   stage: test
   needs: []
-  image: musicscience37/pipenv:jammy
+  image: musicscience37/pipenv:noble
   variables:
-    PYTHON_VERSION: "3.11"
+    PYTHON_VERSION: "3.12"
   before_script:
     - poetry config virtualenvs.in-project true
     - poetry env use ${PYTHON_VERSION}
@@ -41,6 +41,13 @@ python checks:
 
 tests:
   extends: .poetry install
+  parallel:
+    matrix:
+      - PYTHON_VERSION:
+        # TODO
+        # - "3.10"
+        - "3.11"
+        - "3.12"
   script:
     - poetry run pytest --cov py_msgpack_rpc tests
     - poetry run coverage report

@@ -1,6 +1,6 @@
 {
   "build": { "dockerfile": "Dockerfile" },
-  "containerEnv": {"SHELL": "/bin/bash"},
+  "containerEnv": { "SHELL": "/bin/bash" },
   "customizations": {
     "vscode": {
       "extensions": [
@@ -26,5 +26,5 @@
     }
   },
   "postCreateCommand": "bash ./.devcontainer/setup.bash",
-  "remoteUser": "vscode"
+  "remoteUser": "ubuntu"
 }
