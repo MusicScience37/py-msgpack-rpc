@@ -12,7 +12,7 @@ include:
   needs: []
   image: musicscience37/pipenv:noble
   variables:
-    PYTHON_VERSION: "3.12"
+    PYTHON_VERSION: "3.13"
   before_script:
     - poetry config virtualenvs.in-project true
     - poetry env use ${PYTHON_VERSION}
@@ -44,9 +44,9 @@ tests:
   parallel:
     matrix:
       - PYTHON_VERSION:
-        - "3.10"
-        - "3.11"
-        - "3.12"
+          - "3.11"
+          - "3.12"
+          - "3.13"
   script:
     - poetry run pytest --cov py_msgpack_rpc tests
     - poetry run coverage report
