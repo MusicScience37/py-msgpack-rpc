@@ -16,38 +16,38 @@ classifiers = [
     "Intended Audience :: Developers",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
-    "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
     "Topic :: System :: Networking",
     "Typing :: Typed",
 ]
 
 [tool.poetry.dependencies]
-python = ">=3.10,<3.13"
-msgpack = ">=1,<2"
-typing-extensions = ">=4,<5"
+python = ">=3.11,<3.14"
+msgpack = ">=1.1.1"
+typing-extensions = ">=4.14.1"
 
 [tool.poetry.group.dev.dependencies]
-black = "^24.4.2"
-pre-commit = "^3.7.1"
-pylint = "^3.2.2"
-mypy = "^1.10.0"
-flake8 = "^7.0.0"
-isort = "^5.13.2"
+black = "^25.1.0"
+pre-commit = "^4.3.0"
+pylint = "^3.3.8"
+mypy = "^1.17.1"
+flake8 = "^7.3.0"
+isort = "^6.0.1"
 pydocstyle = "^6.3.0"
-pytest = "^8.2.1"
-pytest-cov = "^5.0.0"
-pytest-asyncio = "^0.23.7"
+pytest = "^8.4.1"
+pytest-cov = "^6.2.1"
+pytest-asyncio = "^1.1.0"
 
 [tool.poetry.group.doc.dependencies]
 toml = "^0.10.2"
 types-toml = "^0.10.8.20240310"
-Sphinx = "^7.3.7"
-doc8 = "^1.1.1"
-sphinx-autobuild = "^2024.4.16"
-sphinx-orange-book-theme = "^0.9.0"
-myst-parser = "^3.0.1"
+Sphinx = "^8.2.3"
+doc8 = "^2.0.0"
+sphinx-autobuild = "^2024.10.3"
+sphinx-orange-book-theme = "^0.16.0"
+myst-parser = "^4.0.1"
 
 [tool.isort]
 profile = "black"
