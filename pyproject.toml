@@ -24,30 +24,30 @@ classifiers = [
 ]
 
 [tool.poetry.dependencies]
-python = ">=3.11,<3.14"
-msgpack = ">=1.1.1"
-typing-extensions = ">=4.14.1"
+python = ">=3.12,<3.14"
+msgpack = ">=1.2.1"
+typing-extensions = ">=4.16.0"
 
 [tool.poetry.group.dev.dependencies]
-black = "^25.1.0"
-pre-commit = "^4.3.0"
-pylint = "^3.3.8"
-mypy = "^1.17.1"
+black = "^26.5.1"
+pre-commit = "^4.6.0"
+pylint = "^4.0.6"
+mypy = "^2.3.0"
 flake8 = "^7.3.0"
-isort = "^6.0.1"
+isort = "^8.0.1"
 pydocstyle = "^6.3.0"
-pytest = "^8.4.1"
-pytest-cov = "^6.2.1"
-pytest-asyncio = "^1.1.0"
+pytest = "^9.1.1"
+pytest-cov = "^7.1.0"
+pytest-asyncio = "^1.4.0"
 
 [tool.poetry.group.doc.dependencies]
 toml = "^0.10.2"
-types-toml = "^0.10.8.20240310"
-Sphinx = "^8.2.3"
+types-toml = "^0.10.8.20260518"
+Sphinx = "^9.1.0"
 doc8 = "^2.0.0"
-sphinx-autobuild = "^2024.10.3"
-sphinx-orange-book-theme = "^0.16.0"
-myst-parser = "^4.0.1"
+sphinx-autobuild = "^2025.8.25"
+sphinx-orange-book-theme = "^0.21.0"
+myst-parser = "^5.1.0"
 
 [tool.isort]
 profile = "black"
