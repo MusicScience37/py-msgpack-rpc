@@ -10,7 +10,7 @@ include:
 .poetry install:
   stage: test
   needs: []
-  image: musicscience37/pipenv:noble
+  image: musicscience37/pipenv:resolute
   variables:
     PYTHON_VERSION: "3.13"
   before_script:
@@ -44,7 +44,6 @@ tests:
   parallel:
     matrix:
       - PYTHON_VERSION:
-          - "3.11"
           - "3.12"
           - "3.13"
   script:

@@ -1,4 +1,4 @@
-FROM musicscience37/pipenv:noble
+FROM musicscience37/pipenv:resolute
 
 ARG USERNAME=ubuntu
 ARG USER_UID=1000
