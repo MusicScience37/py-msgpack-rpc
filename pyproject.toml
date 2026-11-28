@@ -46,7 +46,7 @@ types-toml = "^0.10.8.20260518"
 Sphinx = "^9.1.0"
 doc8 = "^2.0.0"
 sphinx-autobuild = "^2025.8.25"
-sphinx-orange-book-theme = "^0.21.0"
+sphinx-orange-book-theme = "^0.22.0"
 myst-parser = "^5.1.0"
 
 [tool.isort]
